@@ -8,34 +8,29 @@
 import csv
 import os
 
+# Assign a variable for the file to load and the path.
 
-
-#assign a variable for the file to load and the path
-
-file_to_load=os.path.join("election_results.csv") 
-
-#Open the elction results and read the file.
+file_to_load = os.path.join("Resources", "election_results.csv")
+# Open the election results and read the file.
 
 with open(file_to_load) as election_data:
 
-#To do:perform analysis.
+    # Print the file object.
 
-    print(election_data)
+     print(election_data)
 
-#create a filename variable to a direct or indirect path to the file
-
-file_to_save=os.path.join("election_analysis.txt")
-
-#using the open() function with the "w" mode we will write data to the file
-
+# Create a filename variable to a direct or indirect path to the file.
+file_to_save = os.path.join("analysis", "election_analysis.txt")
+# Using the open() function with the "w" mode we will write data to the file.
 open(file_to_save, "w")
 
-#close the file.
+# Create a filename variable to a direct or indirect path to the file.
+file_to_save = os.path.join("analysis", "election_analysis.txt")
 
-election_data.close()
+# Using the with statement open the file as a text file.
+with open(file_to_save, "w") as txt_file:
 
-
-dir(os)
-
-
-
+ # Write three counties to the file.
+     txt_file.write("Counties in Election\n------------\nArapahoe\nDenver\nJefferson")
+# Close the file
+outfile.close()
